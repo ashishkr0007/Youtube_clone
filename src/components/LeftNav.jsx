@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import LeftNavMenuItem from "./LeftNavMenuItem";
 import { categories } from "../utils/constants";
-import Context from "../context/contextApi";
+import { Context } from "../context/contextApi";
 
 const LeftNav = () => {
   const { selectedCategory, setSelectedCategory, mobileMenu } =
@@ -51,7 +51,7 @@ const LeftNav = () => {
           );
         })}
         <hr className="my-5 border-white/[0.2]" />
-        <div className="text-white/[0.5] text-[12px]">Clone by:Ashish</div>
+        <div className="text-white/[0.5] text-[12px]">Clone by: Ashish</div>
       </div>
     </div>
   );

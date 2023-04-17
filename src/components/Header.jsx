@@ -10,7 +10,7 @@ import { RiVideoAddLine } from "react-icons/ri";
 import { FiBell } from "react-icons/fi";
 import { CgClose } from "react-icons/cg";
 
-import Context from "../context/contextApi";
+import { Context } from "../context/contextApi";
 import Loader from "../shared/loader";
 import { useContext } from "react";
 
@@ -88,12 +88,12 @@ const Header = () => {
           <div className="flex items-center justify-center ml-2 h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]">
             <FiBell className="text-white text-xl cursor-pointer" />
           </div>
-          <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4">
-            <img
-              src="https://randomuser.me/api/portraits/men/85.jpg"
-              alt="Profile"
-            />
-          </div>
+        </div>
+        <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4">
+          <img
+            src="https://randomuser.me/api/portraits/men/85.jpg"
+            alt="Profile"
+          />
         </div>
       </div>
     </div>
