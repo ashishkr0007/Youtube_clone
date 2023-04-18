@@ -12,7 +12,7 @@ const SearchResult = () => {
   const { setLoading } = useContext(Context);
 
   useEffect(() => {
-    document.getElementById("root").classList.add("custom-h");
+    document.getElementById("root").classList.remove("custom-h");
     fetchSearchResults();
   }, [searchQuery]);
 

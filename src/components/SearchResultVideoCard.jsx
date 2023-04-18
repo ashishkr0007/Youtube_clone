@@ -1,6 +1,6 @@
 import React from "react";
-import { abbreviateNumber } from "js-abbreviation-number";
 import { Link } from "react-router-dom";
+import { abbreviateNumber } from "js-abbreviation-number";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 
 import VideoLength from "../shared/videoLength";
@@ -12,8 +12,7 @@ const SearchResultVideoCard = ({ video }) => {
         <div className="relative flex shrink-0 h-48 md:h-28 lg:h-40 xl:h-48 w-full md:w-48 lg:w-64 xl:w-80 rounded-xl bg-slate-800 overflow-hidden">
           <img
             className="h-full w-full object-cover"
-            src={video?.thumbnails?.[0]?.url}
-            alt="thumbnails"
+            src={video?.thumbnails[0]?.url}
           />
           {video?.lengthSeconds && <VideoLength time={video?.lengthSeconds} />}
         </div>
@@ -30,7 +29,6 @@ const SearchResultVideoCard = ({ video }) => {
                 <img
                   className="h-full w-full object-cover"
                   src={video?.author?.avatar[0]?.url}
-                  alt="authorAvatar"
                 />
               </div>
             </div>

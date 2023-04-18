@@ -11,9 +11,10 @@ import SuggestionVideoCard from "./SuggestionVideoCard";
 
 const VideoDetails = () => {
   const [video, setVideo] = useState();
-  const [relatedVideo, setRelatedVideo] = useState();
+  const [relatedVideos, setRelatedVideos] = useState();
   const { id } = useParams();
   const { setLoading } = useContext(Context);
+
   useEffect(() => {
     document.getElementById("root").classList.add("custom-h");
     fetchVideoDetails();
@@ -33,7 +34,7 @@ const VideoDetails = () => {
     setLoading(true);
     fetchDataFromApi(`video/related-contents/?id=${id}`).then((res) => {
       console.log(res);
-      setRelatedVideo(res);
+      setRelatedVideos(res);
       setLoading(false);
     });
   };
@@ -62,7 +63,7 @@ const VideoDetails = () => {
                   <img
                     className="h-full w-full object-cover"
                     src={video?.author?.avatar[0]?.url}
-                    alt="Avatar"
+                    alt="videoAvatar"
                   />
                 </div>
               </div>
@@ -90,7 +91,7 @@ const VideoDetails = () => {
           </div>
         </div>
         <div className="flex flex-col py-6 px-4 overflow-y-auto lg:w-[350px] xl:w-[400px]">
-          {relatedVideo?.contents?.map((item, index) => {
+          {relatedVideos?.contents?.map((item, index) => {
             if (item?.type !== "video") return false;
             return <SuggestionVideoCard key={index} video={item?.video} />;
           })}

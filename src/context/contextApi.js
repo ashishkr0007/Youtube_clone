@@ -1,14 +1,13 @@
 import React, { createContext, useState, useEffect } from "react";
 
 import { fetchDataFromApi } from "../utils/api";
-
 export const Context = createContext();
 
 export const AppContext = (props) => {
   const [loading, setLoading] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("New");
-  const [mobileMenu, setMobileMenu] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(true);
 
   useEffect(() => {
     fetchSelectedCategoryData(selectedCategory);

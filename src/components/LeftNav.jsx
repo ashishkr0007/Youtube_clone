@@ -19,7 +19,6 @@ const LeftNav = () => {
         return setSelectedCategory(name);
       case "menu":
         return false;
-
       default:
         break;
     }
@@ -51,7 +50,9 @@ const LeftNav = () => {
           );
         })}
         <hr className="my-5 border-white/[0.2]" />
-        <div className="text-white/[0.5] text-[12px]">Clone by: Ashish</div>
+        <div className="text-white/[0.5] text-[12px]">
+          Clone by: Ashish Kumar
+        </div>
       </div>
     </div>
   );

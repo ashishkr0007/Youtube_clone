@@ -1,7 +1,7 @@
 import React from "react";
 import { abbreviateNumber } from "js-abbreviation-number";
-import { Link } from "react-router-dom";
 import { BsFillCheckCircleFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 import VideoLength from "../shared/videoLength";
 
@@ -13,7 +13,6 @@ const SuggestionVideoCard = ({ video }) => {
           <img
             className="h-full w-full object-cover"
             src={video?.thumbnails[0]?.url}
-            alt="VideoThumbnails"
           />
           {video?.lengthSeconds && <VideoLength time={video?.lengthSeconds} />}
         </div>
